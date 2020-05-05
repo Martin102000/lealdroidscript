@@ -213,6 +213,8 @@ if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") 
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "pt" > ${SCPidioma} || echo "${id}" > ${SCPidioma}
    [[ ${byinst} = "true" ]] && install_fim
+   rm -r ${SCPdir}/message.txt
+   echo "VENTAS LEALDROID" >> ${SCPdir}/message.txt
 else
 invalid_key
 fi
